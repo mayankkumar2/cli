@@ -47,6 +47,7 @@ async function pack (spec = 'file:.', opts = {}) {
     const destination = path.resolve(opts.packDestination, filename)
     await writeFile(destination, tarball)
   }
+  
 
   if (spec.type === 'directory' && !opts.ignoreScripts) {
     // postpack
