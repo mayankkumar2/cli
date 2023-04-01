@@ -178,7 +178,6 @@ module.exports = cls => class Builder extends cls {
 
   async [_build] (nodes, { type = 'deps' }) {
     process.emit('time', `build:${type}`)
-
     await this[_buildQueues](nodes)
 
     if (!this[_ignoreScripts]) {
